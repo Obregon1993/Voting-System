@@ -8,6 +8,9 @@ const bodyParser = require('body-parser');
 //database connection
 const db = require('./models');
 
+//routes connection
+const routes = require('./routes');
+
 //importing handlers
 const handlers = require('./handlers');
 
@@ -21,7 +24,7 @@ app.get('/', (req, res) => {
   res.json({ hello: 'world' });
 });
 
-app.get('/api/login', (req, res) => {});
+app.use('/api/auth', routes.auth);
 
 app.use(handlers.notFound);
 app.use(handlers.errors);
