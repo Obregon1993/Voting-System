@@ -1,5 +1,6 @@
 module.exports = {
   ...require('./auth'),
+  ...require('./candidates'),
 };
 
 module.exports.errors = (err, req, res, next) => {

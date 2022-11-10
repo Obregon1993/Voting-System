@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/auth', routes.auth);
+app.use('/api/candidates', routes.candidates);
 
 app.use(handlers.notFound);
 app.use(handlers.errors);

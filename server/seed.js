@@ -15,23 +15,23 @@ const users = [
 //const votes
 const candidates = [
   {
-    party: 'Democratic Party',
+    parties: 'Democratic Party',
     options: ['Juan', 'Pepe'],
   },
   {
-    party: 'Republican Party',
+    parties: 'Republican Party',
     options: ['John', 'Antonio'],
   },
   {
-    party: 'Libertarian Party',
+    parties: 'Libertarian Party',
     options: ['George', 'Liam'],
   },
   {
-    party: 'Socialist Party',
+    parties: 'Socialist Party',
     options: ['Carlos', 'Jose'],
   },
   {
-    party: 'Natural Party',
+    parties: 'Natural Party',
     options: ['Mike', 'Donald'],
   },
 ];
