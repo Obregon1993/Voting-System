@@ -1,7 +1,7 @@
 import { ADD_ERROR, REMOVE_ERROR } from '../actionTypes';
 
 const reducer = (state = {}, action) => {
-  switch (action.types) {
+  switch (action.type) {
     case ADD_ERROR:
       return { ...state, message: action.error };
 
