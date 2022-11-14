@@ -1,14 +1,14 @@
 import React from 'react';
-import Candidate from '../components/Candidate';
+import Candidates from '../components/Candidates';
 import ErrorMessage from '../components/ErrorMessage';
 
-const TestPage = () => {
+const HomePage = (props) => {
   return (
     <div>
       <ErrorMessage />
-      <Candidate />
+      <Candidates {...props} />
     </div>
   );
 };
 
-export default TestPage;
+export default HomePage;

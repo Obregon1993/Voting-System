@@ -13,8 +13,8 @@ class Candidates extends Component {
   }
 
   handleSelect(id) {
-    const { getCurrentCandidates } = this.props;
-    getCurrentCandidates(id);
+    const { history } = this.props;
+    history(`/candidates/${id}`);
   }
 
   componentDidMount() {
