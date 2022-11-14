@@ -25,15 +25,15 @@ exports.login = async (req, res, next) => {
 
     if (valid) {
       const token = jwt.sign({ id, username }, process.env.SECRET);
-      res.json({
+      res.status(200).json({
         id,
         username,
         token,
       });
     } else {
-      throw new Error('Invalid username or password');
+      throw new Error();
     }
   } catch (error) {
-    next(error);
+    next({ status: 400, message: 'Invalid username or password' });
   }
 };

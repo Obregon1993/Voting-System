@@ -11,7 +11,10 @@ const NavBar = ({ auth, logout }) => {
           <Link to="/register">Register</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/login">login</Link>
+        </li>
+        <li>
+          <Link to="/test">Test</Link>
         </li>
         <li>
           <a href="/" onClick={logout}>

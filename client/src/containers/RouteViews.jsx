@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import AuthPage from '../pages/AuthPage';
+import TestPage from '../pages/TestPage';
 
 const RouteViews = ({ auth }) => {
   return (
@@ -22,6 +23,7 @@ const RouteViews = ({ auth }) => {
             />
           }
         />
+        <Route path="/test" element={<TestPage />} />
       </Routes>
     </main>
   );
