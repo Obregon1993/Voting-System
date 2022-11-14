@@ -39,8 +39,9 @@ class CreateCandidates extends Component {
   render() {
     const options = this.state.options.map((option, index) => (
       <Fragment key={index}>
-        <label>option</label>
+        <label className="form-label">option</label>
         <input
+          className="form-input"
           type="text"
           value={option}
           key={index}
@@ -50,9 +51,12 @@ class CreateCandidates extends Component {
     ));
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="parties">Party</label>
+      <form className="form" onSubmit={this.handleSubmit}>
+        <label className="form-label" htmlFor="parties">
+          Party
+        </label>
         <input
+          className="form-input"
           id="parties"
           type="text"
           name="parties"
@@ -61,11 +65,14 @@ class CreateCandidates extends Component {
         />
 
         {options}
-
-        <button type="button" onClick={this.addAnswer}>
-          Add option
-        </button>
-        <button type="submit">Submit</button>
+        <div className="buttons_center">
+          <button className="button" type="button" onClick={this.addAnswer}>
+            Add option
+          </button>
+          <button className="button" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     );
   }

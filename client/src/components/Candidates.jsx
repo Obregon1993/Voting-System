@@ -32,12 +32,16 @@ class Candidates extends Component {
     return (
       <Fragment>
         {auth.isAuthenticated && (
-          <div>
-            <button onClick={getCandidates}>Default Parties</button>
-            <button onClick={getUserCandidates}>My Parties</button>
+          <div className="buttons_center">
+            <button className="button" onClick={getCandidates}>
+              Default Parties
+            </button>
+            <button className="button" onClick={getUserCandidates}>
+              My Parties
+            </button>
           </div>
         )}
-        <ul>{candidates}</ul>
+        <ul className="candidates">{candidates}</ul>
       </Fragment>
     );
   }

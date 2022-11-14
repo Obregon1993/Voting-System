@@ -15,6 +15,7 @@ const Candidate = ({ candidates, vote }) => {
     candidates.options &&
     candidates.options.map((option) => (
       <button
+        className="button"
         onClick={() => vote(candidates._id, { answer: option.option })}
         key={option._id}
       >
@@ -38,8 +39,8 @@ const Candidate = ({ candidates, vote }) => {
 
   return (
     <div>
-      <h3>{candidates.parties}</h3>
-      <div>{answers}</div>
+      <h3 className="candidates-title">{candidates.parties}</h3>
+      <div className="buttons_center">{answers}</div>
       <div id="myChart">
         {candidates.options && (
           <Pie
