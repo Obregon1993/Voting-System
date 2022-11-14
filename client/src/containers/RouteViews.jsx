@@ -12,6 +12,7 @@ import AuthPage from '../pages/AuthPage';
 import TestPage from '../pages/TestPage';
 import HomePage from '../pages/HomePage';
 import CandidatePage from '../pages/CandidatePage';
+import CreateCandidatesPage from '../pages/CreateCandidatesPage';
 
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
@@ -51,6 +52,13 @@ const RouteViews = ({ auth, getCurrentCandidates, ...props }) => {
               authType="register"
               isAuthenticated={auth.isAuthenticated}
             />
+          }
+        />
+        <Route
+          exact
+          path="/candidates/new"
+          element={
+            <CreateCandidatesPage isAuthenticated={auth.isAuthenticated} />
           }
         />
         <Route
